@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@300;400;500&display=swap');
+
+$bg: rgb(16, 16, 16);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+a,
+h2 {
+    color: #fff;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: auto;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    >img {
+        width: 200px;
+        cursor: pointer;
+    }
+
+    >div {
+        width: 100%;
+
+        >a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+
+    >svg {
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(216, 216, 216);
+        }
+    }
+
+    .mobile_nav {
+        width: 0;
+        padding: 50px 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 12;
+        background-color: $bg;
+        height: 100vh;
+        transition: all 0.5s;
+        box-sizing: border-box;
+
+        .close_icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.7rem;
+
+            >path {
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    @media screen and (max-width: 700px) {
+        img {
+            width: 110px;
+        }
+    }
+
+
+
+    @media screen and (min-width: 613px) {
+        .open_icon {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 612px) {
+        .desktop_search {
+            display: none;
+        }
+
+        .desktop_nav {
+            display: none;
+        }
+    }
+}
